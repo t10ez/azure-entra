@@ -1,0 +1,5 @@
+# samael verifies signatures with xmlsec1. Everything must link Homebrew's libxml2: if macOS's
+# /usr/lib/libxml2 sneaks in (via the system libxslt), every signature check fails.
+#   brew install libxmlsec1 libxml2 libxslt pkgconf
+[env]
+PKG_CONFIG_PATH = "/opt/homebrew/opt/libxslt/lib/pkgconfig:/opt/homebrew/opt/libxml2/lib/pkgconfig:/opt/homebrew/opt/libxmlsec1/lib/pkgconfig"
